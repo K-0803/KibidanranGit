@@ -1,0 +1,64 @@
+html {
+	background-color: rgb(247, 237, 229);
+}
+
+
+h1 {
+    color: #56423f; 
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+
+
+
+
+.selectbox-1, .selectbox-2 {
+    position: relative;
+}
+
+.selectbox-1::before, .selectbox-1::after,
+.selectbox-2::before, .selectbox-2::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-1::before, .selectbox-2::before {
+    right: 0;
+    display: inline-block;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0 25px 25px 0;
+    background-color: #efa593;
+    content: '';
+}
+
+.selectbox-1::after, .selectbox-2::after {
+    position: absolute;
+    top: 50%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+}
+
+.selectbox-1 select, .selectbox-2 select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: 2px solid #efa593;
+    border-radius: 25px;
+    color: #56423f;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.selectbox-1 select:focus, .selectbox-2 select:focus {
+    outline: 1px solid #efa593;
+}

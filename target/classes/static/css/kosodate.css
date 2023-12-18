@@ -1,0 +1,369 @@
+html {
+    background-color: rgb(247, 237, 229);
+    background-repeat: repeat-y;
+}
+
+h1 {
+    color: #56423f; 
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  }
+  
+  
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  
+  
+  .kyoten ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  /* 拠点たち↓ */
+  
+  .A{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .B{
+    height: 80px;
+    display:none
+  }
+  
+  .B th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  .C{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .D{
+    height:80px;
+    display:none
+  }
+  
+  .D th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .E{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .F{
+    height: 80px;
+    display:none
+  }
+  
+  .F th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .G{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .H{
+    height: 80px;
+    display:none
+  }
+  
+  .H th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .I{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .J{
+    height: 80px;
+    display:none
+  }
+  
+  .J th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .K{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .L{
+    height: 80px;
+    display:none
+  }
+  
+  .L th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .N{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .M{
+    height: 80px;
+    display:none
+  }
+  
+  .M th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .O{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .P{
+    height: 80px;
+    display:none
+  }
+  
+  .P th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .Q{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .R{
+    height: 80px;
+    display:none
+  }
+  
+  .R th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .S{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .T{
+    height: 80px;
+    display:none
+  }
+  
+  .T th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .U{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .V{
+    height: 80px;
+    display:none
+  }
+  
+  .V th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  
+  .W{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .X{
+    height: 80px;
+    display:none
+  }
+  
+  .X th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .Y{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .Z{
+    height: 80px;
+    display:none
+  }
+  
+  .Z th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .A1{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .B1{
+    height: 80px;
+    display:none
+  }
+  
+  .B1 th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  
+  .C1{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .D1{
+    height: 80px;
+    display:none
+  }
+  
+  .D1 th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .E1{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .F1{
+    height: 80px;
+    display:none
+  }
+  
+  .F1 th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .G1{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .H1{
+    height:80px;
+    display:none
+  }
+  
+  .H1 th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  
+  .I1{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .J1{
+    height: 80px;
+    display:none
+  }
+  
+  .J1 th {
+    text-align-last: justify;
+    padding: 0 10px 0 0;
+    font-size: 13px;
+  }
+  

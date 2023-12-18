@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/syumireta.css" rel="stylesheet" type="text/css">
+    <script src="../js/syumireta.js"></script>
+    <title>卒研</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+          <li><a href="top.html">トップ</a></li>
+          <li><a href="hikaku.html">地図</a></li>
+          <li><a href="syumireta.html">シュミレーター</a></li>
+          <li><a href="kekkon.html">政策（結婚）</a></li>
+          <li><a href="kosodate.html">政策（子育て）</a></li>
+          <li><a href="kensaaku.html">マップ検索</a></li>
+          <li><a href="shitsumon.html">よくある質問</a></li>
+      </ul>
+  </nav>
+
+    <h1>金額シミュレーター</h1>
+    <form>
+      <label class="selectbox-1">
+        <select>
+            <option value="yoji-st" selected>託児所入園</option>
+            <option value="jido-st">小学校入学</option>
+        </select>
+      </label>
+      <span>から</span>
+      <label class="selectbox-2">
+        <select>
+            <option value="yoji-fn" selected>託児所卒業</option>
+            <option value="jido-fn">小学校卒業</option>
+            <option value="gaki-fn">中学校卒業</option>
+        </select>
+    </label>
+    </form>
+    <div class="total"  style="padding: 5px; margin-bottom: 10px; border: 1px dashed #333333;">
+      <p></p>
+      </div>
+  </body>
+</html>

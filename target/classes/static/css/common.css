@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap');
+
+html {
+    background-color: rgb(247, 237, 229);
+    color: #56423f; 
+    font-family: 'Zen Maru Gothic', serif;
+    font-weight: bold; /* 太いフォント */
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  border-bottom: 4px solid #56423f;
+  margin: 0;
+  padding: 2%;
+}
+h3,h4{
+  margin: 0;
+  padding: 2%;
+} 
+header h1 {
+  font-size: 45px;
+  color: #56423f; 
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  margin: 0 2%;
+}
+header p {
+  font-size: 20px;
+  margin: 1% 3%;
+}
+
+/* 枠線 */
+.jack-in-the-box {
+  width: 90%;
+  border: 5px solid #56423f;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 1.5%;
+}
+
+.title {
+  width: 100%;
+}
+
+.jack-in-the-box{
+  border: solid 7px #56423f;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  margin-right: 7.5%;
+}
+
+/* ハンバーガーメニュー */
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: fixed;
+  left: -9999px;
+}
+.menu-icon:checked + label,
+.menu-icon:not(:checked) + label{
+  position: fixed;
+  top: 63px;
+  right: 35px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.menu-icon:checked + label:before,
+.menu-icon:not(:checked) + label:before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #ffb71b;
+  border-bottom: 2px solid #ffb71b;
+  transition: border-width 100ms 1500ms ease, 
+              top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms ease,
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:after,
+.menu-icon:not(:checked) + label:after{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  z-index: 20;
+  top: 10px;
+  right: 4px;
+  background-color: #ffb71b;
+  margin-top: -1px;
+  transition: width 100ms 1750ms ease, 
+              right 100ms 1750ms ease,
+              margin-top 100ms ease, 
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:before{
+  top: 10px;
+  transform: rotate(45deg);
+  height: 2px;
+  background-color: #ffb71b;
+  border-width: 0;
+  transition: border-width 100ms 340ms ease, 
+              top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms 500ms ease,
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:after{
+  width: 30px;
+  margin-top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transition: width 100ms ease,
+              right 100ms ease,  
+              margin-top 100ms 500ms ease, 
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav{
+  position: fixed;
+  top: 33px;
+  right: 10px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+  overflow: hidden;
+  box-shadow: 0 8px 30px 0 rgba(29, 29, 29, 0.284);
+  background-color: #56423f;
+  animation: border-transform 7s linear infinite;
+  transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
+              right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 1100ms ease,
+              width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes border-transform{
+    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+}
+
+.menu-icon:checked ~ .nav {
+  animation-play-state: paused;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 60%;
+  height: 80%;
+  animation: border-transform-1 10s linear infinite;
+  transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1), 
+              right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 700ms ease,
+              width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes border-transform-1{
+  0%,100% { border-radius: 58% 42% 54% 46% / 55% 48% 52% 45%; } 
+  7% { border-radius: 51% 49% 54% 46% / 52% 54% 46% 48%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+  21% { border-radius: 47% 53% 46% 54% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 48% 52% / 52% 62% 38% 48%; } 
+  35% { border-radius: 57% 43% 57% 43% / 55% 45% 55% 45%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+  49% { border-radius: 61% 39% 61% 39% / 65% 44% 56% 35%; }
+  56% { border-radius: 59% 41% 67% 33% / 65% 50% 50% 35%; }
+  63% { border-radius: 56% 44% 58% 42% / 63% 59% 41% 37%; }
+  70% { border-radius: 50% 50% 39% 61% / 56% 63% 37% 44%; } 
+  77% { border-radius: 48% 52% 42% 58% / 43% 60% 40% 57%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 58% 42% 65%; } 
+  91% { border-radius: 50% 50% 51% 49% / 45% 54% 46% 55%; }
+}
+
+.nav ul{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+  list-style: none;
+}
+.nav ul li{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  list-style: none;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 250ms linear;
+}
+.nav ul li:nth-child(1){
+  transition-delay: 200ms;
+}
+.nav ul li:nth-child(2){
+  transition-delay: 150ms;
+}
+.nav ul li:nth-child(3){
+  transition-delay: 100ms;
+}
+.nav ul li:nth-child(4){
+  transition-delay: 50ms;
+}
+.nav ul li:nth-child(5){
+    transition-delay: 25ms;
+ }
+.nav ul li:nth-child(6){
+    transition-delay: 12.5ms;
+  }
+.nav ul li:nth-child(7){
+    transition-delay: 6.25ms;
+  }
+.nav ul li a{
+  font-size: 5vh;
+  text-decoration:none;
+  text-transform: uppercase;
+  line-height: 1.7;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #ececee;
+  transition: all 250ms linear;
+}
+.nav ul li a:hover{
+  text-decoration: none;
+  color: #ffb71b;
+}
+
+.menu-icon:checked ~ .nav  ul li {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 350ms ease,
+              transform 250ms ease;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(1){
+  transition-delay: 1400ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(2){
+  transition-delay: 1480ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(3){
+  transition-delay: 1560ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(4){
+  transition-delay: 1640ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(5){
+    transition-delay: 1720ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(6){
+    transition-delay: 1800ms;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(7){
+    transition-delay: 1880ms;
+}
+
+@media screen and (max-width: 991px) {
+  .jack-in-the-box{
+    margin-left: 4%;
+  }
+  .jack-in-the-box p{
+    margin: 1%;
+  }
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label{
+    right: 55px;
+  }
+  .nav{
+    right: 30px;
+  }
+  .nav ul li a{
+    font-size: 3vh;
+  }
+  .menu-icon:checked ~ .nav {
+    width: 80%;
+    height: 55%;
+  }
+  .rotated-text {
+    display:none;
+  }
+}
+
+
+/* 遺物 */
+/* .okayamacity input {
+    width: 60%;
+    height: 60%;
+}
+
+.okayamacity {
+    text-align: center;
+}  */
+
+
+/* kekkon.css */
+#chapter1 .kekkon {
+  display: flex;
+}
+
+#chapter1 .kekkon h3 {
+  width: 8%;
+  text-align: left;
+}
+
+#chapter1 .seisaku {
+  padding: 2%;
+  width: 90%;
+}
+
+#chapter1 .seisaku a {
+    padding: 0 2%;
+}
+
+/* kosodate.css */
+h1 {
+  color: #56423f; 
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+
+#chapter2 .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#chapter2 h3 {
+  border-bottom: solid 2px #56423f;
+}
+
+#chapter2 .container h4 {
+  width: 100%;
+  border-bottom: solid 1px #c2b8b5;
+}
+
+#chapter2 table {
+  padding: 0 2% 2% 2%;
+}
+
+#chapter2 .kyoten {
+  border-bottom: solid 2px #56423f;
+}
+
+
+.kyoten ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.kyoten a {
+  color: #56423f;
+}
+
+.B td, .D td, .F td, .H td, .J td, .N td, .L td, .P td, .R td, .T td, .V td, .X td, .Z td,
+.B th, .D th  .F th, .H th, .J th, .N th, .L th, .P th, .R th, .T th, .V th, .X th, .Z th,
+.B1 td, .D1 td, .F1 td, .H1 td, .J1 td,
+.B1 th, .D1 th  .F1 th, .H1 th, .J1 th {
+  white-space: nowrap; /* テキストを折り返さないように */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 要素内でテキストが省略された場合、省略記号で表示 */
+}
+
+/* 画面サイズが小さい場合にフォントサイズを調整 */
+@media (max-width: 600px) {
+  .B td, .D td, .F td, .H td, .J td, .L td, .M td, .P td, .R td, .T td, .V td, .X td, .Z td,
+  .B th, .D th  .F th, .H th, .J th, .L th, .M th, .P th, .R th, .T th, .V th, .X th, .Z th,
+  .B1 td, .D1 td, .F1 td, .H1 td, .J1 td,
+  .B1 th, .D1 th  .F1 th, .H1 th, .J1 th {
+    white-space: normal; /* テキストを折り返す */
+    font-size: 12px; /* 適切なフォントサイズに調整 */
+  }
+}
+
+/* 拠点たち↓ */
+
+.A{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.B{
+  height: 80px;
+  display:none
+}
+
+.B th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+
+
+.C{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.D{
+  height:80px;
+  display:none
+}
+
+.D th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.E{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.F{
+  height: 80px;
+  display:none
+}
+
+.F th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.G{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.H{
+  height: 80px;
+  display:none
+}
+
+.H th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.I{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.J{
+  height: 80px;
+  display:none
+}
+
+.J th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.K{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.L{
+  height: 80px;
+  display:none
+}
+
+.L th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.N{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.M{
+  height: 80px;
+  display:none
+}
+
+.M th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.O{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.P{
+  height: 80px;
+  display:none
+}
+
+.P th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.Q{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.R{
+  height: 80px;
+  display:none
+}
+
+.R th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.S{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.T{
+  height: 80px;
+  display:none
+}
+
+.T th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.U{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.V{
+  height: 80px;
+  display:none
+}
+
+.V th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+
+.W{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.X{
+  height: 80px;
+  display:none
+}
+
+.X th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.Y{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.Z{
+  height: 80px;
+  display:none
+}
+
+.Z th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.A1{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.B1{
+  height: 80px;
+  display:none
+}
+
+.B1 th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+
+.C1{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.D1{
+  height: 80px;
+  display:none
+}
+
+.D1 th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.E1{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.F1{
+  height: 80px;
+  display:none
+}
+
+.F1 th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.G1{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.H1{
+  height:80px;
+  display:none
+}
+
+.H1 th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+.I1{
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.J1{
+  height: 80px;
+  display:none
+}
+
+.J1 th {
+  text-align-last: justify;
+  padding: 0 10px 0 0;
+  font-size: 13px;
+}
+
+/* syumireta.css */
+.selectbox-1, .selectbox-2 {
+  position: relative;
+}
+
+.selectbox-1::before, .selectbox-1::after,
+.selectbox-2::before, .selectbox-2::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.selectbox-1::before, .selectbox-2::before {
+  right: 0;
+  display: inline-block;
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 0 25px 25px 0;
+  background-color: #efa593;
+  content: '';
+}
+
+.selectbox-1::after, .selectbox-2::after {
+  position: absolute;
+  top: 50%;
+  right: 1.4em;
+  transform: translate(50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+}
+
+.selectbox-1 select, .selectbox-2 select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 230px;
+  height: 2.8em;
+  padding: .4em 3.6em .4em .8em;
+  border: 2px solid #efa593;
+  border-radius: 25px;
+  color: #56423f;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.selectbox-1 select:focus, .selectbox-2 select:focus {
+  outline: 1px solid #efa593;
+}
+
+#chapter3 form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+#chapter3 span {
+  width: 10%;
+  text-align: center;
+}
+/* 
+.selectbox-1, .selectbox-2 {
+  position: relative;
+  width: 45%;
+  min-width: 160px;
+}
+
+.selectbox-1::before, .selectbox-1::after,
+.selectbox-2::before, .selectbox-2::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.selectbox-1::before, .selectbox-2::before {
+  right: 0;
+  display: inline-block;
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 0 25px 25px 0;
+  background-color: #efa593;
+  content: '';
+}
+
+.selectbox-1::after, .selectbox-2::after {
+  position: absolute;
+  top: 50%;
+  right: 1.4em;
+  transform: translate(50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+}
+
+.selectbox-1 select, .selectbox-2 select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 230px;
+  height: 2.8em;
+  padding: .4em 3.6em .4em .8em;
+  border: 2px solid #efa593;
+  border-radius: 25px;
+  color: #56423f;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.selectbox-1 select:focus, .selectbox-2 select:focus {
+  outline: 1px solid #efa593;
+} */
+
+.total p{
+  margin: 0;
+  padding: 1% 3% 3% 3%;
+  font-size: 20px;
+}
+
+/* 施設検索 */
+#chapter4 form {
+  margin: 2%;
+}
+
+#chapter4 .map-show {
+  padding: 50px;
+  border: 1px dashed #56423f;
+}
+
+#chapter4.serchResultName {
+  padding: 10px; 
+  margin-bottom: 10px;
+  border: 1px dashed #56423f;
+}
+
+#chapte4 .serchResultDetail {
+  padding: 10px;
+  border: 1px dashed #56423f;
+}
+
+/* キケンな食物 */
+#chapter5 p {
+  margin: 0;
+  padding: 0 2% 2% 2%;
+}
+
+/* shitsumon.css */
+#chapter6 .shitumon h3 {
+  color: #e96747;
+  border-bottom: solid 1px #efa593;
+}
+
+#chapter6 p {
+  margin: 0;
+  padding: 1% 2%;
+}
+
+/* 画面右下のロゴ */
+.rotated-text {
+  position: fixed;
+  top: 500px; /* 上からの距離（適宜調整） */
+  right: 80px; /* 左からの距離（適宜調整） */
+  text-orientation: upright; /* テキストの方向を縦に保つ（必要に応じて） */
+  white-space: nowrap; /* テキストが折り返されないようにする */
+  font-size: 35px;
+  transform: rotate(90deg); /* 90度回転 */
+  transform-origin: right bottom; /* 回転の基準点を指定 */
+  color: #56423f;
+}
+
+
+/* フッター */
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: #56423f;
+  color: rgb(247, 237, 229);
+}
+
+footer p {
+  padding: 2%;
+}
