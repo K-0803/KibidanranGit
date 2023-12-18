@@ -1,0 +1,26 @@
+html {
+    background-image: url(../haikei.png);
+    background-repeat: repeat-y;
+}
+
+h1 {
+    color: #5b2714; 
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+h3 {
+    color: #eb4e15;
+    border-bottom: solid 1px #eb4e15;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    text-align: center;
+}
+
+
